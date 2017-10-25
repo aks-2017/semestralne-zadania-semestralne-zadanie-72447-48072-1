@@ -19,6 +19,7 @@ Overovanie výsledkov dosiahnutých v zdrojovom článku budeme realizovať pomo
 ## Topológia siete
 
 ![alt text](topologia_siete.png)
+
 Obrázok č.1: Topológia siete.
 
 Pre úplnosť je ale nutné dodať, že výsledky budú overované na inom stroji s iným operačným systémom ako je uvedený v zdrojovom článku. To by ale nemalo ovplyvňovať výsledky natoľko, aby nebolo možné overenie pravdivosti výsledných tvrdení článku.
