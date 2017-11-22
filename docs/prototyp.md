@@ -87,7 +87,7 @@ pozn. SOFTmon aplikáciu nie je potrebné inštalovať na MininetVM
 $ git clone https://github.com/mha-net/SOFTmon
 ```
 
-2. Spustenie SOFTmon v MININET
+2. <a name="soft">Spustenie SOFTmon v MININET</a>
 
 ```
 $ cd SOFTmon/jar
@@ -101,7 +101,7 @@ $ java -jar SOFTmon-1.0.8_OF13_WIN.jar &
 
 
 
-## VYTVORENIE TESTOVACÍCH TOPOLÓGIÍ
+## <a name="topo">VYTVORENIE TESTOVACÍCH TOPOLÓGIÍ</a>
 
 1. Základná MININET topológia
 
@@ -237,8 +237,8 @@ Prepojenie v rámci mininetu:
 
 1. Pripojiť sa na mininet pomocou troch inštancií putty
 2. Prvá inštancia: Spustenie [FLOODLIGHT](#flood)
-3. Druhá inštancia: Spustenie SOFTmon
-4. Tretia inštancia: Spustenie topológie
+3. Druhá inštancia: Spustenie [SOFTmon](#soft)
+4. Tretia inštancia: Spustenie [topológie](#topo)
 5. `port` pre FLOODLIGHT nastaviť na `8080`, ide o nechránené pripojenie; inak može dojsť k zamietnutiu spojenia
 
 ## TESTOVANIE
@@ -256,7 +256,7 @@ $ pingall
 
 ```
 
-![](/testing_screens/screen_ping.png)
+![](/docs/testing_screens/screen_ping.png)
 
 
 Monitorovanie TCP spojenia prostredníctvom `iperf` nástroja.
@@ -274,9 +274,9 @@ $ iperf -c 10.0.0.1 -w 130k
 
 ```
 
-![](/testing_screens/screen_iperf.png)
+![](/docs/testing_screens/screen_iperf.png)
 
-![](/testing_screens/server_client.png)
+![](/docs/testing_screens/server_client.png)
 
 
 
@@ -291,7 +291,7 @@ $ pingall
 
 ```
 
-![](/testing_screens/screen_ping_topology2-3.png)
+![](/docs/testing_screens/screen_ping_topology2-3.png)
 
 
 Monitorovanie TCP spojenia prostredníctvom `iperf` nástroja.
@@ -309,9 +309,9 @@ $ iperf -c 10.0.0.9 -w 1250k
 
 ```
 
-![](/testing_screens/screen_iperf_asok_topology2-3.png)
+![](/docs/testing_screens/screen_iperf_topology2-3.png)
 
-![](/testing_screens/server_client_asok_topology2-3.png)
+![](/docs/testing_screens/client_server_topology2-3.png)
 
 ### MERANIA NA TOPOLÓGIÍ ASOK 
 
@@ -323,7 +323,7 @@ $ pingall
 
 ```
 
-![](/testing_screens/screen_ping_asok.png)
+![](/docs/testing_screens/screen_ping_asok.png)
 
 
 Monitorovanie TCP spojenia prostredníctvom `iperf` nástroja.
@@ -341,9 +341,9 @@ $ iperf -c 10.0.0.7 -w 1250k
 
 ```
 
-![](/testing_screens/screen_iperf_asok.png)
+![](/docs/testing_screens/screen_iperf_asok.png)
 
-![](/testing_screens/server_client_asok.png)
+![](/docs/testing_screens/client_server_asok.png)
 
 
 ### ROZDIELY SO ZDROJOVÝM ČLÁNKOM
