@@ -1,6 +1,6 @@
 # 2. KONTROLNÝ BOD [ PROTOTYP ]  
 
-V tomto... tento kontrolný bod sme si určily niekoľko cieľov.
+Pre tento kontrolný bod sme si vymedzili niekoľko cieľov.
 
 * Inštalácia potrebných koponentov
     * Floodlight v1.1
@@ -31,20 +31,20 @@ Požadovaný softvér:
 Podrobný tutoriál je možne nájsť na stránke [MININET](http://mininet.org/download/)
 
 
-1. Stiahnuť si [Mininet VM Image v.2.2.1 ( 32 bit )](https://github.com/mininet/mininet/wiki/Mininet-VM-Images)
+1. Stiahnuť si [Mininet VM Image v.2.2.2 ( 32 bit )](https://github.com/mininet/mininet/wiki/Mininet-VM-Images)
 2. Stiahnuť a nainštalovať softvéer na virtualizáciu. Odporúča sa [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
-3. Klknúť na `.ovf` subor v Mininet `.zip`, stiahnutý v kroku 1. a ten sa otvorí vo VirtualBox
+3. Kliknúť na `.ovf` subor v Mininet `.zip`, stiahnutý v kroku 1. a ten sa otvorí vo VirtualBox
 4. Nastaviť `Network` v nastaveniach, na `NAT` a `HOST-ONLY`
 5. Sputiť Mininet, meno: `mininet`, heslo: `mininnet`
-6. Zadať príkaz `sudo dhclient eth1`, ktorý vytvorý nový pristupový bod   
-7. Prpojiť sa na mininet pomocou [PuTTY](http://www.putty.org) s povoleným `-X forwarding`
+6. Zadať príkaz `sudo dhclient eth1`, ktorý vytvorí nový pristupový bod   
+7. Pripojiť sa na mininet pomocou [PuTTY](http://www.putty.org) s povoleným `-X forwarding`
 
 
 ### FLOODLIGHT INŠTALÁCIA
 
 Podrobný tutoriál je možné nájsť na stránke [FLOODLIGHT](https://floodlight.atlassian.net/wiki/spaces/floodlightcontroller/pages/1343544/Installation+Guide)
 
-1. Sttiahnuť potrebný softvér pre floodlight pomocou príkazu 
+1. Stiahnuť potrebný softvér pre floodlight pomocou príkazu 
 ```
 $ sudo apt-get update
 $ sudo apt-get install build-essential openjdk-7-jdk ant maven python-dev eclipse
@@ -243,14 +243,109 @@ Prepojenie v rámci mininetu:
 
 ## TESTOVANIE
 
-Testovanie prebiehalo na všetkých vyššie spomýnaných topológiach. Meranie bolo odsledované na `ping` funkcii ako aj s `iperf` testovacím nástrojom.
+Testovanie prebiehalo na všetkých vyššie spomínaných topológiach. Meranie bolo odsledované na `ping` funkcii ako aj s `iperf` testovacím nástrojom.
 
 ### MERANIA NA ZÁKLADNEJ TOPOLÓGIÍ
 
+
+Monitorovanie `ping` funkcie. 
+
+
+```
+$ pingall 
+
+```
+
+![](/testing_screens/screen_ping.png)
+
+
+Monitorovanie TCP spojenia prostredníctvom `iperf` nástroja.
+
+1. Spustiť Server
+
+```
+$ iperf -s -w 130k
+
+```
+2. Sputiť Client
+
+```
+$ iperf -c 10.0.0.1 -w 130k
+
+```
+
+![](/testing_screens/screen_iperf.png)
+
+![](/testing_screens/server_client.png)
+
+
+
+
 ### MERANIA NA TOPOLÓGIÍ S HĹBKOU 2 A VETVENÍM 3
+
+Monitorovanie `ping` funkcie. 
+
+
+```
+$ pingall 
+
+```
+
+![](/testing_screens/screen_ping_topology2-3.png)
+
+
+Monitorovanie TCP spojenia prostredníctvom `iperf` nástroja.
+
+1. Spustiť Server
+
+```
+$ iperf -s -w 1250k
+
+```
+2. Sputiť Client
+
+```
+$ iperf -c 10.0.0.9 -w 1250k
+
+```
+
+![](/testing_screens/screen_iperf_asok_topology2-3.png)
+
+![](/testing_screens/server_client_asok_topology2-3.png)
 
 ### MERANIA NA TOPOLÓGIÍ ASOK 
 
+Monitorovanie `ping` funkcie. 
+
+
+```
+$ pingall 
+
+```
+
+![](/testing_screens/screen_ping_asok.png)
+
+
+Monitorovanie TCP spojenia prostredníctvom `iperf` nástroja.
+
+1. Spustiť Server
+
+```
+$ iperf -s -w 1250k
+
+```
+2. Sputiť Client
+
+```
+$ iperf -c 10.0.0.7 -w 1250k
+
+```
+
+![](/testing_screens/screen_iperf_asok.png)
+
+![](/testing_screens/server_client_asok.png)
+
+
 ### ROZDIELY SO ZDROJOVÝM ČLÁNKOM
 
-Pri implementácii riešenia sme narazili na problémy spojené s verziami softvéru, ktorý pri písaní článku autory využili. Konkrétne sa jedná o verziu mininetu. V zdrojovom článku je MININET v.2.2.1 pričom mi využívame MININET v.2.2.2. V prototype sme využili iba jeden virtuálny stroj na ktorom súčasne spúšťame všekty potrebné programy, pričom autori článku využili dve virtuálne stroje pod hlavným operačným systémom. Z dôvodu nedostupnosti ASOK clustra sme sa rozhodli simulovať prostredie v MININET a tak sa môže stať, že výsledky sa budú odlyšovať, čo ale neznamená, že aplikácia nefunguje správne.     
+Pri implementácii riešenia sme narazili na problémy spojené s verziami softvéru, ktorý pri písaní článku autory využili. Konkrétne sa jedná o verziu mininetu. V zdrojovom článku je MININET v.2.2.1 pričom mi využívame MININET v.2.2.2. V prototype sme využili iba jeden virtuálny stroj, na ktorom súčasne spúšťame všekty potrebné programy, pričom autori článku využili dve virtuálne stroje pod hlavným operačným systémom. Z dôvodu nedostupnosti ASOK clustra sme sa rozhodli simulovať prostredie v MININET a tak sa môže stať, že výsledky sa budú odlišovať, čo ale neznamená, že aplikácia nefunguje správne.     
