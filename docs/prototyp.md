@@ -253,7 +253,6 @@ Monitorovanie `ping` funkcie.
 
 ```
 $ pingall 
-
 ```
 
 ![](/docs/testing_screens/screen_ping.png)
@@ -265,13 +264,11 @@ Monitorovanie TCP spojenia prostredníctvom `iperf` nástroja.
 
 ```
 $ iperf -s -w 130k
-
 ```
 2. Sputiť Client
 
 ```
 $ iperf -c 10.0.0.1 -w 130k
-
 ```
 
 ![](/docs/testing_screens/screen_iperf.png)
@@ -288,7 +285,6 @@ Monitorovanie `ping` funkcie.
 
 ```
 $ pingall 
-
 ```
 
 ![](/docs/testing_screens/screen_ping_topology2-3.png)
@@ -300,13 +296,11 @@ Monitorovanie TCP spojenia prostredníctvom `iperf` nástroja.
 
 ```
 $ iperf -s -w 1250k
-
 ```
 2. Sputiť Client
 
 ```
 $ iperf -c 10.0.0.9 -w 1250k
-
 ```
 
 ![](/docs/testing_screens/screen_iperf_topology2-3.png)
@@ -320,7 +314,6 @@ Monitorovanie `ping` funkcie.
 
 ```
 $ pingall 
-
 ```
 
 ![](/docs/testing_screens/screen_ping_asok.png)
@@ -332,13 +325,11 @@ Monitorovanie TCP spojenia prostredníctvom `iperf` nástroja.
 
 ```
 $ iperf -s -w 1250k
-
 ```
 2. Sputiť Client
 
 ```
 $ iperf -c 10.0.0.7 -w 1250k
-
 ```
 
 ![](/docs/testing_screens/screen_iperf_asok.png)
