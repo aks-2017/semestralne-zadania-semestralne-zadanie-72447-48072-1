@@ -4,7 +4,7 @@
 
 SOFTmon je aplikácia nad sieťovou vrstvou SDN siete. Hlavnou myšlienkou SOFTmon je vizualizácia a monitorovanie siete. SOFTmon implementuje merania, ktoré monitorujú switch, porty a tokové štatistky, ktoré sú definované OpenFlow štandardom.
 
-![alt text](SOFTmon_screen.png)
+![alt text](./img/SOFTmon_screen.png)
 
 Obrázok č.1: Grafické rozhranie programu SOFTmon.
 
@@ -61,46 +61,22 @@ Overovanie výsledkov dosiahnutých v zdrojovom článku budeme realizovať pomo
 
 
 
-![alt text](ipref_conf.png)
+![alt text](./img/ipref_conf.png)
 
 Obrázok č.2: ipref configurácia.
 
-![alt text](graf.png)
+![alt text](./img/graf.png)
 
 Obrázok č.3: Graf  meraní z programu SOFTmon.
 
 
 ## Topológia siete
 
-![alt text](topologia_siete.png)
+![alt text](./img/topologia_siete.png)
 
 Obrázok č.4: Topológia siete.
 
 Pre úplnosť je ale nutné dodať, že výsledky budú overované na inom stroji s iným operačným systémom ako je uvedený v zdrojovom článku. To by ale nemalo ovplyvňovať výsledky natoľko, aby nebolo možné overenie pravdivosti výsledných tvrdení článku.
-
-Základné typy a metriky ktoré SOFTmon monitoruje, sú zobrazené v tabuľke č.1: Metriky a podkladové počítadla. Kalkulácia výkonnostných metrík je odvodená z port a flow štatistík definovaných v OpenFlov v1.3 štandarte.
-
-Tabuľka č.1: Metriky a podkladové počítadla.
-
-Typ | Metrika | Jednotka | Počítadlo | Jednotka
-----|---------|----------|-----------|---------
-Switch Stats. |Flow Count | n | Active Entries (Tables) |n 
-                | Packet Rate | n/s | Received Packets (Flows) | n
-                | Byte Rate | Byte/s | Received Bytes (Flows) |Byte
-Port Stats.     | RX Packet Rate | n/s | Received Packets | n
-                | TX Packet Rate | n/s | Transmitted Packets | n
-                | RX Byte Rate | Byte/s | Received Bytes | Byte
-                | TX Byte Rate | Byte/s | Transmitted Bytes | Byte
-                | RX Port Usage | % | Received Bytes | Byte
-                | TX Port Usage | % | Transmitted Bytes | Byte
-Flow Stats.     | Packet Rate | n/s | Received Packets | n
-                | Packet Rate | Byte/s | Received Bytes | Byte
-
-
-
-
-
-
 
 Použité prostredie v práci:
 
