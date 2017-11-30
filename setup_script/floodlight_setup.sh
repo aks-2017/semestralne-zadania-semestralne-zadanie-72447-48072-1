@@ -1,4 +1,5 @@
 #!/bin/bash
+cd
 sudo apt-get update -y
 sudo apt-get install software-properties-common -y
 sudo apt-get update -y
@@ -12,6 +13,3 @@ ant
  
 sudo mkdir /var/lib/floodlight
 sudo chmod 777 /var/lib/floodlight
-
-cd floodlight
-java -jar target/floodlight.jar
