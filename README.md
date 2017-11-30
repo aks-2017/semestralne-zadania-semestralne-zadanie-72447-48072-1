@@ -10,6 +10,6 @@ Softvérovo definované siete (SDN) sú základným nástrojom virtualizácie si
 
 >url: http://ezproxy.cptisr.isk:2057//iscience/artcle/pii/S877/7/050o87/1812163 
 
-
+Pre nainštalovanie záklkadného setupu spustite súbor floodlight_script v zložke setup_script
 
 
