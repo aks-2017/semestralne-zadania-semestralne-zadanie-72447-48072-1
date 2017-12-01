@@ -10,7 +10,13 @@ Softvérovo definované siete (SDN) sú základným nástrojom virtualizácie si
 
 >url: http://ezproxy.cptisr.isk:2057//iscience/artcle/pii/S877/7/050o87/1812163 
 
-Pre nainštalovanie základného setupu spustite súbor floodlight_setup.sh v zložke setup_script
+Pre nainštalovanie základného setupu spustite súbor floodlight_setup.sh v zložke setup_script a zároveň run.sh, ktoré sa spúštajú prostredníctvom bash 
+
+Tieto súbory je nutné premiestniť do domovkého adresára. Spou s topológiami siete, ktoré sa nachádzajú v zložke topo.
+
+V zložke testovania a merania nájdete obrazovky z vykonaných testov rôznych topológii s jednotlivými nastaveniami.
+
+V zložke code/jar sa nachádza spúštajúci súbor pre SOFTmon s názvom floodlight.jar, tento názov sme zvolili z dovodu, ze v aktualnej verzii podporuje iba Floodlight riadiacu jednotku.
 
 V prípade, že by skripty z neidentifikovaných dôvodov nefungovali, prikladáme návod na konfiguráciu potrebných inštancii ako aj spustenie aplikácie, ktorý sa nachádza v zložke: /docs/prototype.md
 
