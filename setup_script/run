@@ -19,6 +19,7 @@ while [ "$1" != "" ]; do
               sudo mn --custom soft23.py --topo mytopo --controller=remote --switch ovsk,protocols=OpenFlow13 --mac 
               ;;
         -h | --help ) 
+		      echo "-f (run floodlight controller)"
                       echo "-1 (run default mn topology with floodlight controller)"
                       echo "-2 (run tree topology with depth 3 and fanout 2 floodlight controller)"
                       echo "-3 (run asok topology with floodlight controller)"
