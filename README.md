@@ -18,6 +18,8 @@ V zložke testovania a merania nájdete obrazovky z vykonaných testov rôznych 
 
 V zložke code/jar sa nachádza spúštajúci súbor pre SOFTmon s názvom floodlight.jar, tento názov sme zvolili z dovodu, ze v aktualnej verzii podporuje iba Floodlight riadiacu jednotku.
 
+Upozorňujeme, že mininet ako aj floodlight a softmon treba spúštať v 3 separátnych termináloch.
+
 V prípade, že by skripty z neidentifikovaných dôvodov nefungovali, prikladáme návod na konfiguráciu potrebných inštancii ako aj spustenie aplikácie, ktorý sa nachádza v zložke: /docs/prototype.md
 
 
