@@ -16,7 +16,7 @@ Tieto súbory je nutné premiestniť do domovkého adresára. Spou s topológiam
 
 V zložke testovania a merania nájdete obrazovky z vykonaných testov rôznych topológii s jednotlivými nastaveniami.
 
-V zložke code/jar sa nachádza spúštajúci súbor pre SOFTmon s názvom floodlight.jar, tento názov sme zvolili z dovodu, ze v aktualnej verzii podporuje iba Floodlight riadiacu jednotku.
+V zložke code/jar sa nachádza spúštajúci súbor pre SOFTmon.
 
 Upozorňujeme, že mininet ako aj floodlight a softmon treba spúštať v 3 separátnych termináloch.
 
