@@ -1,0 +1,33 @@
+#!/bin/bash
+
+while [ "$1" != "" ]; do
+    case $1 in
+
+        -f ) cd floodlight_10
+              java -jar target/floodlight.jar
+             ;;
+        -1 )
+              sudo mn --controller=remote --switch ovsk,protocols=OpenFlow13 --mac
+              ;;
+        -2 )
+              sudo mn --controller=remote --switch ovsk,protocols=OpenFlow13 --mac --topo tree,depth=3,fanout=2
+              ;;
+        -3 )
+              sudo mn --custom asok.py --topo mytopo --controller=remote --switch ovsk,protocols=OpenFlow13 --mac
+              ;;
+	-4 )
+              sudo mn --custom soft23.py --topo mytopo --controller=remote --switch ovsk,protocols=OpenFlow13 --mac 
+              ;;
+        -h | --help ) 
+                      echo "-1 (run default mn topology with floodlight controller)"
+                      echo "-2 (run tree topology with depth 3 and fanout 2 floodlight controller)"
+                      echo "-3 (run asok topology with floodlight controller)"
+                      echo "-4 (run softmon test topology with depth 2 fanout 3)"
+                                exit
+                                ;;
+        * )                     echo "Wrong argument se -h for instruction how to use run script"
+                                exit 1
+    esac
+    shift
+done
+
